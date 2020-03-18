@@ -1,9 +1,11 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 var fs = require("fs");
+const adminchannel;
 
 client.on("ready", () => {
   console.log("Discord Bot started!");
+  adminchannel = client.channels.cache.get("689949212011528262");
 });
 
 client.on("message", msg => {
@@ -21,7 +23,7 @@ client.on("guildMemberAdd", member => {
     }
     let languageJSON = JSON.parse(fs.readFileSync("./assets/i18n/" + localeCode + ".json"));
     member.send({embed: {color: 3447003, fields: languageJSON.welcome}});
-
+    adminchannel.send("Ein neuer Benutzer ist gejoint " + member.nickname);
   } catch (e) {
     console.error(e);
   }
