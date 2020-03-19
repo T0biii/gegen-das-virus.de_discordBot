@@ -23,7 +23,7 @@ client.on("guildMemberAdd", member => {
     }
     let languageJSON = JSON.parse(fs.readFileSync("./assets/i18n/" + localeCode + ".json"));
     member.send({embed: {color: 3447003, fields: languageJSON.welcome}});
-    adminchannel.send("Ein neuer Benutzer ist gejoint " + member.displayName);
+    adminchannel.send("Ein neuer Benutzer hat den Discord betreten: " + member.displayName);
   } catch (e) {
     console.error(e);
   }
