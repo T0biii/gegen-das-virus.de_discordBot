@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Fr13dr1ch/gegen-den-virus-discordbot#readme",
   "dependencies": {
-    "discord.js": "^12.0.2"
+    "discord.js": "^12.1.1"
   }
 }
